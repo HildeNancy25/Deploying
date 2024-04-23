@@ -10,8 +10,8 @@ const Layout = () => {
       <div className='bg-red-300 h-[90vh] border-2 border-blue-400 rounded-2xl p-3'>
         <Jane />
         <div className='flex'>
-          <Outlet />
           <Header /> 
+          <Outlet />          
         </div>
       </div>
     </div>
