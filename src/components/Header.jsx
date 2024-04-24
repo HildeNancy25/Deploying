@@ -9,6 +9,7 @@ function Header() {
                 <Link to='/' className=' hover:text-red-600' >Home</Link>
                 <Link to='/about' className=' hover:text-red-600'>About</Link>
                 <Link to='/contact' className=' hover:text-red-600'>Contact</Link>
+                <Link to='/sign-in' className=' hover:text-red-600'>Sign In</Link>
             </div>
         </div>
     </>

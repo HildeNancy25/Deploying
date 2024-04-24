@@ -8,6 +8,10 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Layout from './layout/Layout'
+import SignIn from './Authentication/SignIn'
+import SignUp from './Authentication/SignUp'
+import ForgotPassword from './Authentication/ForgotPassword'
+import ResetPassword from './Authentication/ResetPassword'
 
 function App() {
   return (
@@ -18,6 +22,22 @@ function App() {
             path='/'
             element={<Layout/>}        
         >
+        <Route 
+            path='/sign-in'
+            element={<SignIn />}
+        />
+          <Route 
+          path='/sign-up'
+          element={<SignUp />}
+          />
+          <Route 
+          path='/forgot-password'
+          element={<ForgotPassword />}
+          />
+          <Route 
+          path='/reset-password'
+          element={<ResetPassword />}
+          />
         <Route 
             path='/'
             element={<Home/>}        
@@ -30,6 +50,7 @@ function App() {
             path='/contact'
             element={<Contact/>}
         />
+        {/* </Route> */}
         </Route>
       </Routes>
     </Router>
