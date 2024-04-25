@@ -12,6 +12,7 @@ import SignIn from './Authentication/SignIn'
 import SignUp from './Authentication/SignUp'
 import ForgotPassword from './Authentication/ForgotPassword'
 import ResetPassword from './Authentication/ResetPassword'
+import AuthRoutes from './Authentication/AuthRoutes'
 
 function App() {
   return (
@@ -19,13 +20,13 @@ function App() {
     <Router>
       <Routes>
         <Route 
-            path='/'
-            element={<Layout/>}        
+        path='/'
+        element={<AuthRoutes/>}
         >
-        <Route 
-            path='/sign-in'
+          <Route 
+            path='/'
             element={<SignIn />}
-        />
+          />
           <Route 
           path='/sign-up'
           element={<SignUp />}
@@ -38,8 +39,14 @@ function App() {
           path='/reset-password'
           element={<ResetPassword />}
           />
+        </Route>
         <Route 
             path='/'
+            element={<Layout/>}        
+        >
+        
+        <Route 
+            path='/landing-page'
             element={<Home/>}        
         />
         <Route 
