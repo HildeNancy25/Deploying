@@ -10,14 +10,15 @@ import Contact from './pages/Contact'
 import Layout from './layout/Layout'
 import SignIn from './Authentication/SignIn'
 import SignUp from './Authentication/SignUp'
-import ForgotPassword from './Authentication/ForgotPassword'
 import ResetPassword from './Authentication/ResetPassword'
 import AuthRoutes from './Authentication/AuthRoutes'
+import OTPGenerate from './OTP/OtpGenerator'
+import OtpVerify from './OTP/OtpVerify'
 
 function App() {
   return (
     <>
-    <Router>
+    <Router> 
       <Routes>
         <Route 
         path='/'
@@ -32,8 +33,12 @@ function App() {
           element={<SignUp />}
           />
           <Route 
-          path='/forgot-password'
-          element={<ForgotPassword />}
+          path='/forgot-password' 
+          element={<OTPGenerate />}
+          />
+          <Route 
+          path='/verifyOTP' 
+          element={<OtpVerify />}
           />
           <Route 
           path='/reset-password'
